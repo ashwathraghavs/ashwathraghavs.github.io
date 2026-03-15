@@ -174,7 +174,7 @@
       <span class="pill gold">3× AWS ML Certified</span>
     </div>
     <div class="hero-cta">
-      <a href="/cdn-cgi/l/email-protection#a1c0d2c9d6c0d5c9d3c0c6c9c0d7d2e1c6ccc0c8cd8fc2cecc" class="btn btn-primary"><span class="__cf_email__" data-cfemail="0f6e7c67786e7b677d6e68676e797c4f68626e6663216c6062">[email&#160;protected]</span></a>
+      <a id="hero-email-btn" class="btn btn-primary" href="#">ashwathraghavs&#64;gmail.com</a>
       <a href="https://linkedin.com/in/Ashwath98" target="_blank" class="btn btn-ghost">LinkedIn ↗</a>
       <a href="https://github.com/ashwathraghavs" target="_blank" class="btn btn-ghost">GitHub ↗</a>
     </div>
@@ -453,12 +453,12 @@
       <h2>Let's Connect</h2>
       <p>Open to senior ML / MLOps engineering roles and interesting collaborations.</p>
       <div class="contact-detail">
-        <span class="contact-item"><span>📧</span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="95f4e6fde2f4e1fde7f4f2fdf4e3e6d5f2f8f4fcf9bbf6faf8">[email&#160;protected]</a></span>
+        <span class="contact-item"><span>📧</span><span id="contact-email-text">ashwathraghavs&#64;gmail.com</span></span>
         <span class="contact-item"><span>📞</span>(856) 515-3766</span>
         <span class="contact-item"><span>📍</span>Shrewsbury, MA</span>
       </div>
       <div class="contact-links">
-        <a href="/cdn-cgi/l/email-protection#0f6e7c67786e7b677d6e68676e797c4f68626e6663216c6062" class="btn btn-primary">Send an Email</a>
+        <a id="contact-email-btn" class="btn btn-primary" href="#">Send an Email</a>
         <a href="https://linkedin.com/in/Ashwath98" target="_blank" class="btn btn-ghost">LinkedIn ↗</a>
         <a href="https://github.com/ashwathraghavs" target="_blank" class="btn btn-ghost">GitHub ↗</a>
       </div>
@@ -467,4 +467,24 @@
 
 </div>
 
-<footer>© 2026 Ashwath Raghav Swaminathan · Built
+<footer>© 2026 Ashwath Raghav Swaminathan · Built with purpose</footer>
+
+<script>
+  (function() {
+    var u = "ashwathraghavs", d = "gmail.com", e = u + "@" + d;
+    var heroBtn = document.getElementById("hero-email-btn");
+    var contactBtn = document.getElementById("contact-email-btn");
+    if (heroBtn) heroBtn.href = "mailto:" + e;
+    if (contactBtn) contactBtn.href = "mailto:" + e;
+  })();
+
+  var els = document.querySelectorAll(".fade-in");
+  var obs = new IntersectionObserver(
+    function(entries) { entries.forEach(function(e) { if (e.isIntersecting) e.target.classList.add("visible"); }); },
+    { threshold: 0.08 }
+  );
+  els.forEach(function(el) { obs.observe(el); });
+</script>
+
+</body>
+</html>
