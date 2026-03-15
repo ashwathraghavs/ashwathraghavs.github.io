@@ -16,7 +16,7 @@
     }
     *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
     html{scroll-behavior:smooth}
-    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.7;overflow-x:hidden}
+    body{background:var(--bg);color:var(--text);font-family:'DM Sans',sans-serif;font-size:15px;line-height:1.7;overflow-x:clip}
     body::before{content:'';position:fixed;inset:0;background-image:linear-gradient(rgba(200,146,42,0.025) 1px,transparent 1px),linear-gradient(90deg,rgba(200,146,42,0.025) 1px,transparent 1px);background-size:48px 48px;pointer-events:none;z-index:0}
     .container{max-width:920px;margin:0 auto;padding:0 28px;position:relative;z-index:1}
     section{padding:72px 0}
@@ -33,7 +33,7 @@
     /* HERO */
     .hero{padding:148px 0 80px}
     .hero-eyebrow{font-family:'DM Mono',monospace;font-size:11.5px;color:var(--gold);letter-spacing:.2em;text-transform:uppercase;margin-bottom:18px;opacity:0;animation:fadeUp .55s .05s ease forwards}
-    .hero h1{font-family:'Syne',sans-serif;font-size:clamp(38px,6.5vw,68px);font-weight:800;line-height:1.05;letter-spacing:-.025em;margin-bottom:22px;opacity:0;animation:fadeUp .55s .15s ease forwards}
+    .hero h1{font-family:'Syne',sans-serif;font-size:clamp(38px,6.5vw,68px);font-weight:800;line-height:1.25;letter-spacing:-.02em;margin-bottom:22px;opacity:0;animation:fadeUp .55s .15s ease forwards}
     .hero h1 .dim{color:var(--muted);font-weight:400}
     .hero-tagline{font-size:16px;color:#8a95a3;max-width:580px;line-height:1.72;margin-bottom:28px;opacity:0;animation:fadeUp .55s .25s ease forwards}
     .hero-meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:36px;opacity:0;animation:fadeUp .55s .35s ease forwards}
@@ -50,7 +50,7 @@
 
     /* SECTION */
     .section-label{font-family:'DM Mono',monospace;font-size:10.5px;color:var(--gold);letter-spacing:.22em;text-transform:uppercase;margin-bottom:8px}
-    .section-title{font-family:'Syne',sans-serif;font-size:27px;font-weight:700;margin-bottom:36px;letter-spacing:-.01em}
+    .section-title{font-family:'Syne',sans-serif;font-size:27px;font-weight:700;margin-bottom:36px;letter-spacing:-.01em;line-height:1.4}
 
     /* SUMMARY */
     .summary-box{background:var(--bg2);border:1px solid var(--border);border-left:3px solid var(--gold);border-radius:10px;padding:28px 32px;color:#8a95a3;font-size:15px;line-height:1.78}
@@ -59,7 +59,7 @@
     .stats-row{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:28px}
     .stat-card{background:var(--bg2);border:1px solid var(--border);border-radius:10px;padding:20px;text-align:center;transition:border-color .2s}
     .stat-card:hover{border-color:var(--gold-dim)}
-    .stat-num{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--gold);line-height:1;margin-bottom:5px}
+    .stat-num{font-family:'Syne',sans-serif;font-size:28px;font-weight:800;color:var(--gold);line-height:1.5;margin-bottom:5px}
     .stat-label{font-size:12px;color:var(--muted);line-height:1.4}
 
     /* EXPERIENCE */
@@ -68,7 +68,7 @@
     .exp-period{font-family:'DM Mono',monospace;font-size:11px;color:var(--gold);letter-spacing:.06em;margin-bottom:5px}
     .exp-company{font-size:13px;color:var(--muted);margin-bottom:3px}
     .exp-location{font-size:11.5px;color:#404a55}
-    .exp-role{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;margin-bottom:14px}
+    .exp-role{font-family:'Syne',sans-serif;font-size:17px;font-weight:700;margin-bottom:14px;line-height:1.5}
     .exp-bullets{list-style:none;display:flex;flex-direction:column;gap:8px}
     .exp-bullets li{font-size:13.5px;color:#7a8694;padding-left:18px;position:relative;line-height:1.65}
     .exp-bullets li::before{content:'─';position:absolute;left:0;color:var(--gold-dim);font-size:10px;top:4px}
@@ -84,11 +84,11 @@
 
     /* CERTS */
     .cert-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-    .cert-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:24px;position:relative;overflow:hidden;transition:all .25s}
+    .cert-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:24px;position:relative;overflow:visible;transition:all .25s}
     .cert-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--gold),transparent)}
     .cert-card:hover{border-color:var(--gold-dim);transform:translateY(-2px);box-shadow:0 10px 30px rgba(0,0,0,.45)}
     .cert-tier{font-family:'DM Mono',monospace;font-size:9.5px;color:var(--gold);letter-spacing:.18em;text-transform:uppercase;margin-bottom:10px}
-    .cert-name{font-family:'Syne',sans-serif;font-size:14.5px;font-weight:700;margin-bottom:6px;line-height:1.35}
+    .cert-name{font-family:'Syne',sans-serif;font-size:14.5px;font-weight:700;margin-bottom:6px;line-height:1.5}
     .cert-code{font-family:'DM Mono',monospace;font-size:11.5px;color:var(--muted);margin-bottom:14px}
     .badge-score{display:inline-flex;align-items:center;gap:5px;font-family:'DM Mono',monospace;font-size:11px;color:var(--green);background:rgba(76,175,80,.1);border:1px solid rgba(76,175,80,.2);border-radius:4px;padding:3px 9px}
     .badge-done{display:inline-flex;align-items:center;gap:5px;font-family:'DM Mono',monospace;font-size:11px;color:var(--gold);background:rgba(200,146,42,.1);border:1px solid var(--gold-dim);border-radius:4px;padding:3px 9px}
@@ -96,10 +96,10 @@
 
     /* EDUCATION */
     .edu-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-    .edu-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:26px;transition:all .2s;position:relative;overflow:hidden}
-    .edu-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--gold-dim),transparent)}
+    .edu-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:26px;transition:all .2s;position:relative;overflow:visible}
+    .edu-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:1px;background:linear-gradient(90deg,var(--gold-dim),transparent);border-radius:0 0 12px 12px}
     .edu-card:hover{border-color:var(--gold-dim)}
-    .edu-degree{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px;line-height:1.3}
+    .edu-degree{font-family:'Syne',sans-serif;font-size:16px;font-weight:700;margin-bottom:6px;line-height:1.5}
     .edu-school{font-size:13.5px;color:#8a95a3;margin-bottom:4px}
     .edu-loc{font-size:12px;color:var(--muted);margin-bottom:14px}
     .edu-meta{display:flex;gap:8px;flex-wrap:wrap}
@@ -111,15 +111,15 @@
     .project-card{background:var(--bg2);border:1px solid var(--border);border-radius:12px;padding:22px;transition:all .25s;display:flex;flex-direction:column}
     .project-card:hover{border-color:var(--gold-dim);transform:translateY(-2px);box-shadow:0 8px 26px rgba(0,0,0,.4)}
     .project-icon{font-size:20px;margin-bottom:14px}
-    .project-name{font-family:'Syne',sans-serif;font-size:14.5px;font-weight:700;margin-bottom:8px}
+    .project-name{font-family:'Syne',sans-serif;font-size:14.5px;font-weight:700;margin-bottom:8px;line-height:1.5}
     .project-desc{font-size:13px;color:#5e6a76;line-height:1.65;flex:1;margin-bottom:14px}
     .project-stack{display:flex;flex-wrap:wrap;gap:5px}
     .stack-tag{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);border-radius:3px;padding:2px 7px}
 
     /* CONTACT */
-    .contact-inner{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:52px 48px;text-align:center;position:relative;overflow:hidden}
+    .contact-inner{background:var(--bg2);border:1px solid var(--border);border-radius:16px;padding:52px 48px;text-align:center;position:relative;overflow:visible}
     .contact-inner::before{content:'';position:absolute;top:-100px;left:50%;transform:translateX(-50%);width:360px;height:240px;background:radial-gradient(ellipse,rgba(200,146,42,.1),transparent 70%);pointer-events:none}
-    .contact-inner h2{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;margin-bottom:10px;position:relative}
+    .contact-inner h2{font-family:'Syne',sans-serif;font-size:30px;font-weight:800;margin-bottom:10px;line-height:1.5;position:relative}
     .contact-inner>p{color:var(--muted);margin-bottom:24px;position:relative}
     .contact-detail{display:flex;align-items:center;justify-content:center;gap:20px;margin-bottom:28px;flex-wrap:wrap;position:relative}
     .contact-item{font-family:'DM Mono',monospace;font-size:12px;color:var(--muted)}
@@ -128,9 +128,9 @@
 
     footer{padding:26px 0;border-top:1px solid var(--border);text-align:center;font-family:'DM Mono',monospace;font-size:10.5px;color:#3a4450;position:relative;z-index:1}
 
-    @keyframes fadeUp{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
-    .fade-in{opacity:0;transform:translateY(14px);transition:opacity .5s ease,transform .5s ease}
-    .fade-in.visible{opacity:1;transform:translateY(0)}
+    @keyframes fadeUp{from{opacity:0}to{opacity:1}}
+    .fade-in{opacity:0;transition:opacity .5s ease}
+    .fade-in.visible{opacity:1}
 
     @media(max-width:700px){
       .exp-item{grid-template-columns:1fr;gap:4px}
@@ -380,42 +380,56 @@
       <div class="section-title">Key Work</div>
     </div>
     <div class="projects-grid fade-in">
+
+      <div class="project-card">
+        <div class="project-icon">🔬</div>
+        <div class="project-name">LLM PR Reviewer</div>
+        <p class="project-desc">Automated GitHub PR judge using Claude as the reasoning engine. Uses pylint, bandit, and safety as ground truth — LLM explains findings, never invents them. 3-model ensemble, dimension-weighted prompts (security 40%, quality 35%, tests 25%), CoT reasoning, hallucination filter, and prompt injection scanner. Deployed via GitHub Actions.</p>
+        <div class="project-stack"><span class="stack-tag">Python</span><span class="stack-tag">LLM / Claude</span><span class="stack-tag">GitHub Actions</span><span class="stack-tag">pylint</span><span class="stack-tag">bandit</span><span class="stack-tag">Vault</span></div>
+      </div>
+
       <div class="project-card">
         <div class="project-icon">🤖</div>
         <div class="project-name">RAMM Core — Multi-Agent LLM Pipeline</div>
         <p class="project-desc">LLM reasoning over structured medical and interview data to simulate underwriter judgment. Random Holdout audits improved model–underwriter alignment by 15%.</p>
         <div class="project-stack"><span class="stack-tag">Multi-Agent</span><span class="stack-tag">LLM</span><span class="stack-tag">SageMaker</span><span class="stack-tag">AWS</span></div>
       </div>
+
       <div class="project-card">
         <div class="project-icon">📚</div>
         <div class="project-name">Bedrock RAG Knowledge Base</div>
         <p class="project-desc">Amazon Bedrock-powered RAG over Confluence for semantic MLOps documentation retrieval, cutting engineer onboarding time significantly.</p>
         <div class="project-stack"><span class="stack-tag">Amazon Bedrock</span><span class="stack-tag">RAG</span><span class="stack-tag">Vector DB</span><span class="stack-tag">LangChain</span></div>
       </div>
+
       <div class="project-card">
         <div class="project-icon">⚡</div>
         <div class="project-name">XGBoost Mortality Models</div>
         <p class="project-desc">Automated retraining loops for mortality prediction in life insurance pricing, improving underwriting efficiency by 25% with full SageMaker + ECS Fargate deployment.</p>
         <div class="project-stack"><span class="stack-tag">XGBoost</span><span class="stack-tag">SageMaker</span><span class="stack-tag">Jenkins</span><span class="stack-tag">ECS Fargate</span></div>
       </div>
+
       <div class="project-card">
         <div class="project-icon">🔍</div>
         <div class="project-name">Patent Semantic Search — Schwab</div>
         <p class="project-desc">Asymmetric semantic search over USPTO patent corpus using fine-tuned MS-MARCO bi-encoder for Basket ETF company clustering. 20% processing time reduction.</p>
         <div class="project-stack"><span class="stack-tag">NLP</span><span class="stack-tag">HuggingFace</span><span class="stack-tag">Bi-Encoder</span><span class="stack-tag">Python</span></div>
       </div>
+
       <div class="project-card">
         <div class="project-icon">📊</div>
         <div class="project-name">Time Series Forecasting — Fidelity</div>
         <p class="project-desc">Evolutionary forecasting model for contingent workforce spend prediction with outlier detection over invoice data. PowerBI dashboards saved 560+ man-hours.</p>
         <div class="project-stack"><span class="stack-tag">Time Series</span><span class="stack-tag">Outlier Detection</span><span class="stack-tag">PowerBI</span><span class="stack-tag">Python</span></div>
       </div>
+
       <div class="project-card">
         <div class="project-icon">🕸️</div>
         <div class="project-name">Doc2Vec + Neo4j Search — Condé Nast</div>
         <p class="project-desc">Contextual editorial search engine using Doc2Vec, paired with Neo4j + Gremlin graph optimization for real-time content traversal. Cut computation by 15 minutes.</p>
         <div class="project-stack"><span class="stack-tag">Doc2Vec</span><span class="stack-tag">Neo4j</span><span class="stack-tag">Gremlin</span><span class="stack-tag">NLP</span></div>
       </div>
+
     </div>
   </section>
 
